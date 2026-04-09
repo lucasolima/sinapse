@@ -1,11 +1,11 @@
 
 ## 📚 O que é o Conecta Universidades?
 O **Conecta Universidades** é uma plataforma que busca conectar estudantes universitários através do compartilhamento de conhecimento e ideias, criando novos laços e abrindo portas para desenvolvimento de networks. 
-## Como surgiu a iniciativa?
+## 🤔 Como surgiu a iniciativa?
 A iniciativa surge das mazelas nossa própria vivência universitária: sentimento de baixo engajamento nas atividades acadêmicas, desvalorização das monitorias, das interações humanas e falta de incentivo para concretizar ideias inovadoras. Resolvemos mudar tudo isso. Agora.
 ## 🎯 Nossa proposta
 Utilizando recursos de gamificação e recompensas, a plataforma se propõe a ser um ambiente dinâmico, moderno e recompensador, que incentive o estudante a compartilhar seus conhecimentos, desenvolver habilidades técnicas e interpessoais e ser reconhecido como referência pelos seus pares, proporcionando a formação de grupos de pesquisa, de negócios e networks importantes para a vida acadêmica e profissional do aluno.
-## 🤔 Funcionalidades iniciais
+## 🗒️ Funcionalidades iniciais
 *O que pretendemos implementar inicialmente?*
 
 ### 1. Monitorias
