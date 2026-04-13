@@ -1,0 +1,93 @@
+erDiagram
+  USER {
+    uuid id PK
+    string name
+    string email
+    string password_hash
+    string avatar_url
+    string institution
+    string course
+    int semester
+    string bio
+    timestamp created_at
+  }
+
+  MONITORING_SESSION {
+    uuid id PK
+    uuid monitor_id FK
+    string subject
+    string topic
+    string modality
+    timestamp scheduled_at
+    int max_slots
+    int points_reward
+    float avg_rating
+    timestamp created_at
+  }
+
+  ENROLLMENT {
+    uuid id PK
+    uuid user_id FK
+    uuid session_id FK
+    timestamp enrolled_at
+    int rating
+    string feedback
+  }
+
+  PROJECT {
+    uuid id PK
+    uuid owner_id FK
+    string name
+    string description
+    string status
+    string[] skills_needed
+    timestamp created_at
+  }
+
+  PROJECT_MEMBER {
+    uuid id PK
+    uuid project_id FK
+    uuid user_id FK
+    string role
+    timestamp joined_at
+  }
+
+  FORUM_THREAD {
+    uuid id PK
+    uuid author_id FK
+    string title
+    string body
+    string[] tags
+    int vote_count
+    timestamp created_at
+  }
+
+  FORUM_REPLY {
+    uuid id PK
+    uuid thread_id FK
+    uuid author_id FK
+    string body
+    int vote_count
+    bool is_accepted
+    timestamp created_at
+  }
+
+  NOTIFICATION {
+    uuid id PK
+    uuid user_id FK
+    string type
+    string payload
+    bool read
+    timestamp created_at
+  }
+
+  USER ||--o{ MONITORING_SESSION : "oferece"
+  USER ||--o{ ENROLLMENT : "participa"
+  MONITORING_SESSION ||--o{ ENROLLMENT : "recebe"
+  USER ||--o{ PROJECT : "cria"
+  PROJECT ||--o{ PROJECT_MEMBER : "tem"
+  USER ||--o{ PROJECT_MEMBER : "integra"
+  USER ||--o{ FORUM_THREAD : "abre"
+  FORUM_THREAD ||--o{ FORUM_REPLY : "tem"
+  USER ||--o{ FORUM_REPLY : "responde"
+  USER ||--o{ NOTIFICATION : "recebe"
